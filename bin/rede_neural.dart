@@ -43,15 +43,16 @@ void main(List<String> arguments) {
 
     print('Erro: $error');
 
+    print('\n####### Pesos (Interação: $interation) ##########\n');
+
     if (error != 0) {
-      print('\n####### Novos pesos (Interação: $interation) ##########\n');
       inputWeight = inputWeight + (learningRate * error * input);
       biasWeight = biasWeight + (learningRate * error * bias);
-
-      print('Pesos de entrada: $inputWeight');
-      print('Pesos do viés: $biasWeight');
-      print("\n#################################");
     }
+
+    print('Pesos de entrada: $inputWeight');
+    print('Pesos do viés: $biasWeight');
+    print("\n#################################");
   }
 
   print("\nTreinamento finalizado!");
